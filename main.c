@@ -4,6 +4,13 @@
 #include <stdlib.h>
 #include <math.h>
 
+// "|   |   |   |   |   | |   |   |   |   | |   | |   |   |   |  "
+// "|   | S |   |   | F | | G |   |   | J | | K | | L |   |   |  "
+// "|   |___|   |   |___| |___|   |   |___| |___| |___|   |   |__"
+// "|     |     |     |     |     |     |     |     |     |     |"
+// "|  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |"
+// "|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|"
+
 void playAudio (voice *v) {
   float sample;
   Uint32 sourceIndex;
@@ -227,7 +234,47 @@ int main(int argc, char *argv[]) {
               testVoiceA.frequency = getFrequency(freq0);
               *frq0 += 0.1;
             break;
-            case SDLK_UP:
+            case SDLK_z:
+              testVoiceA.frequency = _Z;
+              testVoiceB.frequency = _Z + 0.43351;
+              testVoiceC.frequency = _Z - 0.24332;
+              //*frq0 += _Z;
+            break;
+            case SDLK_x:
+              testVoiceA.frequency = _X;
+              testVoiceB.frequency = _X + 0.43351;
+              testVoiceC.frequency = _X;
+              //*frq0 += _Z;
+            break;
+            case SDLK_c:
+              testVoiceA.frequency = _C;
+              testVoiceB.frequency = _C + 0.43351;
+              testVoiceC.frequency = _C;
+              //*frq0 += _Z;
+            break;
+            case SDLK_v:
+              testVoiceA.frequency = _V;
+              testVoiceB.frequency = _V + 0.43351;
+              testVoiceC.frequency = _V;
+              //*frq0 += _Z;
+            break;
+            case SDLK_b:
+              testVoiceA.frequency = _B;
+              testVoiceB.frequency = _B + 1.43351;
+              testVoiceC.frequency = _B;
+              //*frq0 += _Z;
+            break;
+            case SDLK_n:
+              testVoiceA.frequency = _N;
+              testVoiceB.frequency = _N + 0.8451;
+              testVoiceC.frequency = _N;
+              //*frq0 += _Z;
+            break;
+            case SDLK_m:
+              testVoiceA.frequency = _M;
+              testVoiceB.frequency = _M - 0.43351;
+              testVoiceC.frequency = _M;
+              //*frq0 += _Z;
             break;
             case SDLK_DOWN:
             break;
