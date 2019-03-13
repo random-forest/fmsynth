@@ -1,4 +1,4 @@
-z#include "keyboard_map.h"
+#include "keyboard_map.h"
 #include <SDL.h>
 
 #define WINDOW_TITLE "))))))))))(((())("
@@ -28,10 +28,10 @@ SDL_Event event;
 SDL_bool running = SDL_TRUE;
 
 typedef struct {
-    float *waveform;
-    Uint32 waveformLength;
-    double volume;
-    double pan;
-    double frequency;
-    double phase;
+  float *waveform;
+  Uint32 waveformLength;
+  double volume;
+  double pan;
+  double frequency;
+  double phase;
 } voice;
